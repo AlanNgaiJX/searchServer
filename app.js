@@ -32,3 +32,6 @@ routes(app)
 app.listen(config.port, () => {
   console.log(`${config.appName} is server on ${config.host}:${config.port}`)
 })
+
+
+console.log(JSON.stringify(process.argv));

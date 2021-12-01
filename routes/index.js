@@ -6,13 +6,14 @@
  * @Description: In User Settings Edit
  * @FilePath: /searchServer/routes/index.js
  */
+const config = require('../config/index')
 const axios = require('axios')
 
 module.exports = exports = (app) => {
   app.get('/', (req, res) => {
-    console.log(req.body)
     res.json({
       status: 'ok',
+      version: config.version
     })
   })
 
@@ -31,7 +32,6 @@ module.exports = exports = (app) => {
             msg: '未知错误，err：' + result.data.err_msg,
           })
         }
-        console.log(result)
       })
       .catch((err) => {
         res.json({

@@ -10,6 +10,7 @@ const config = {
   appName: "searchServer",
   host: "127.0.0.1",
   port: "1998",
+  version: '0.1.0'
 };
 
 module.exports = exports = config;
