@@ -21,7 +21,7 @@ on:
       - "v*"
 
 jobs:
-  build-and-deploy:
+  build-and-release:
     runs-on: ubuntu-latest
     steps:
       # 下载源码
@@ -58,6 +58,9 @@ jobs:
           asset_name: release.tgz
           asset_content_type: application/x-tgz
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       # # 部署到服务器
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
