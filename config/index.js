@@ -10,7 +10,7 @@ const config = {
   appName: "searchServer",
   host: "127.0.0.1",
   port: "1998",
-  version: '0.1.6'// 版本号
+  version: '0.1.7'// 版本号
 };
 
 module.exports = exports = config;
