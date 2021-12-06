@@ -71,6 +71,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /root/servers/searchServer
-            wget https://github.com/AlanNgaiJX/searchServer/releases/latest/download/release.tgz -O release.tgz
+            wget https://github.com/AlanNgaiJX/searchServer/releases/latest/download/release.tgz --no-check-certificate -O release.tgz
             tar -zxvf release.tgz
             pm2 restart pm2.config.js
